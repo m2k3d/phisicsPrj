@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="850" viewBox="0 0 1180 850" role="img" aria-labelledby="title description">
+  <title id="title">Три конструкции лаборатории стоячих волн</title>
+  <desc id="description">Открытый стенд, деревянный сонометр и ступенчатая рама. Ниже показан боковой вид канала длиной 600 миллиметров, ролика и подвеса.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto-start-reverse">
+      <path d="M0 0 6 3 0 6Z" fill="#537078"/>
+    </marker>
+    <g id="track" fill="none" stroke-linecap="round">
+      <path d="M0 0H204q7 0 7 7v25" stroke="#146c73" stroke-width="2.2"/>
+      <rect x="-7" y="-5" width="11" height="10" rx="1.5" fill="#3f5158"/>
+      <circle cx="204" cy="7" r="6" fill="#d2dee0" stroke="#3b535a" stroke-width="2"/>
+      <rect x="204.5" y="27" width="13" height="15" rx="2" fill="#9aa9ad" stroke="#465b62"/>
+    </g>
+    <style>
+      text { font-family: 'Segoe UI', sans-serif; fill: #183137; }
+      .headline { font-size: 34px; font-weight: 700; }
+      .subtitle { font-size: 17px; fill: #50686d; }
+      .card { fill: #fff; stroke: #cbd9db; stroke-width: 1.4; }
+      .letter { font-size: 14px; fill: #146c73; font-weight: 700; }
+      .name { font-size: 20px; font-weight: 700; }
+      .note { font-size: 15px; fill: #50686d; }
+      .label { font-size: 15px; font-weight: 650; }
+      .minor { font-size: 13px; fill: #50686d; }
+      .guide { stroke: #789098; stroke-width: 1.3; fill: none; }
+      .dim { stroke: #537078; stroke-width: 1.5; fill: none; marker-start: url(#arrow); marker-end: url(#arrow); }
+      .datum { stroke: #8ba3aa; stroke-width: 1.2; stroke-dasharray: 4 5; }
+    </style>
+  </defs>
+  <rect width="1180" height="850" fill="#eef4f3"/>
+  <text x="40" y="56" class="headline">Три конструкции стенда</text>
+  <text x="40" y="85" class="subtitle">Три стальные струны · рабочий пролёт 600 мм · подвес 100, 200 или 300 г</text>
+
+  <g transform="translate(40 115)">
+    <rect class="card" width="350" height="270" rx="16"/>
+    <text class="letter" x="22" y="29">ВАРИАНТ A</text>
+    <text class="name" x="22" y="58">Открытый стенд</text>
+    <path d="M35 173 83 105H306L258 173Z" fill="#52646b" stroke="#32464e" stroke-width="2"/>
+    <path d="M35 173H258v11H35zm223 0 48-68v10l-48 69z" fill="#b9c9cd"/>
+    <path d="M70 154h193m-175-20h193m-178-18h193" stroke="#273d44" stroke-width="8" stroke-linecap="round"/>
+    <rect x="160" y="96" width="58" height="14" rx="3" fill="#293d44"/>
+    <rect x="173" y="100" width="21" height="6" rx="1" fill="#79c5bb"/>
+    <use href="#track" x="58" y="154"/>
+    <use href="#track" x="75" y="134"/>
+    <use href="#track" x="92" y="116"/>
+    <text class="note" x="22" y="225">Алюминий и графитовая панель</text>
+    <text class="minor" x="22" y="249">Основание 650 × 380 мм</text>
+  </g>
+
+  <g transform="translate(415 115)">
+    <rect class="card" width="350" height="270" rx="16"/>
+    <text class="letter" x="22" y="29">ВАРИАНТ B</text>
+    <text class="name" x="22" y="58">Деревянный сонометр</text>
+    <path d="M40 166 75 119h234l-35 47z" fill="#e1bb88" stroke="#8b6441" stroke-width="2"/>
+    <path d="M40 166h234v25H40z" fill="#af8055"/>
+    <path d="M274 166l35-47v25l-35 47z" fill="#966b49"/>
+    <path d="M65 160h217m-200-17h214m-197-17h211" stroke="#8d6949" stroke-width="1" opacity=".8"/>
+    <path d="M87 169h148m-141 8h125m-151 8h154" stroke="#d6af85" stroke-width="1" opacity=".7"/>
+    <rect x="27" y="143" width="37" height="19" rx="3" fill="#293d44"/>
+    <rect x="34" y="149" width="20" height="6" rx="1" fill="#79c5bb"/>
+    <use href="#track" x="75" y="153"/>
+    <use href="#track" x="87" y="139"/>
+    <use href="#track" x="99" y="125"/>
+    <text class="note" x="22" y="225">Дубовый шпон и латунные накладки</text>
+    <text class="minor" x="22" y="249">Основание 635 × 280 мм</text>
+  </g>
+
+  <g transform="translate(790 115)">
+    <rect class="card" width="350" height="270" rx="16"/>
+    <text class="letter" x="22" y="29">ВАРИАНТ C</text>
+    <text class="name" x="22" y="58">Ступенчатая рама</text>
+    <path d="M47 197h224l45-42H89zM53 194v-41m24 19v-47m23 24V91m154 102v-40m22 20v-49m23 24V91" fill="none" stroke="#46565e" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M48 154H256m-185-26h211m-188-26h211" fill="none" stroke="#d5ddda" stroke-width="10" stroke-linecap="round"/>
+    <g stroke="#c69743" stroke-width="4">
+      <path d="M48 152h13m10-26h13m10-26h13M244 152h13m11-26h13m11-26h13"/>
+    </g>
+    <use href="#track" x="48" y="148"/>
+    <use href="#track" x="71" y="122"/>
+    <use href="#track" x="94" y="96"/>
+    <rect x="142" y="178" width="67" height="16" rx="3" fill="#293d44"/>
+    <rect x="162" y="182" width="23" height="7" rx="1" fill="#79c5bb"/>
+    <text class="note" x="22" y="225">Открытые каналы на трёх уровнях</text>
+    <text class="minor" x="22" y="249">Высоты струн 160, 220 и 280 мм</text>
+  </g>
+
+  <rect class="card" x="40" y="409" width="1100" height="398" rx="16"/>
+  <text class="name" x="68" y="447">Рабочий пролёт и подвес · боковой вид A</text>
+  <text class="note" x="68" y="472">Для B и C используются те же точки крепления относительно высоты канала.</text>
+
+  <path class="datum" d="M195 510V571m540-61v61m-270-35v132"/>
+  <path class="dim" d="M199 523H731"/>
+  <rect x="421" y="510" width="88" height="25" rx="5" fill="#fff"/>
+  <text x="465" y="528" class="label" text-anchor="middle">600 мм</text>
+  <text x="183" y="558" class="label">A</text>
+  <text x="732" y="558" class="label">B</text>
+
+  <path d="M135 721H708v14H135z" fill="#b6c6c8" stroke="#789097"/>
+  <path d="M158 608H708v26H158z" fill="#52646b"/>
+  <path d="M171 634v87m520-87v87" stroke="#819499" stroke-width="10"/>
+  <path d="M177 607v-29h18v29zM691 606v-17h44v18z" fill="#3d5158"/>
+  <circle cx="735" cy="599" r="23.4" fill="#c6d3d5" stroke="#52646b" stroke-width="2"/>
+  <circle cx="735" cy="599" r="4" fill="#52646b"/>
+  <path d="M195 576.5H735a22.5 22.5 0 0 1 22.5 22.5v40.5" fill="none" stroke="#146c73" stroke-width="3"/>
+  <path d="M195 576.5C285 581.21 375 585.5 465 585.5S645 581.21 735 576.5" fill="none" stroke="#aa761c" stroke-dasharray="6 4" stroke-width="2"/>
+  <circle cx="195" cy="576.5" r="4.3" fill="#0c626a"/>
+  <circle cx="465" cy="576.5" r="4.3" fill="#0c626a"/>
+  <circle cx="735" cy="576.5" r="4.3" fill="#0c626a"/>
+  <rect x="742" y="663" width="31" height="34" rx="4" fill="#829599" stroke="#3f5359" stroke-width="1.8"/>
+  <path d="M757.5 663V649q-5 0-5-5t5-5 5 5" fill="none" stroke="#465c63" stroke-width="2"/>
+  <path d="M745 674h25m-25 10h25" stroke="#536970" stroke-width="1.5"/>
+
+  <path class="guide" d="M465 586v78H425"/>
+  <text x="415" y="660" class="label" text-anchor="end">Датчик в середине пролёта</text>
+  <text x="415" y="680" class="minor" text-anchor="end">Видимое оттягивание до 10 мм</text>
+  <path class="guide" d="M756 584h55l25-22h24M766 645h94m-84 53 60 24h24"/>
+  <text x="874" y="567" class="label">Ролик</text>
+  <text x="874" y="587" class="minor">Радиус по канавке 25 мм</text>
+  <text x="874" y="649" class="label">Ушко подвеса</text>
+  <text x="874" y="669" class="minor">Хвост от точки схода 45 мм</text>
+  <text x="874" y="724" class="label">Груз за краем столешницы</text>
+  <text x="874" y="744" class="minor">Просвет снизу не менее 25 мм</text>
+  <text x="68" y="779" class="minor">Схема показывает компоновку и точки привязки. Материалы и ракурсы уточняются на предварительной 3D-модели.</text>
+</svg>

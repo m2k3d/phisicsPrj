@@ -1,0 +1,27 @@
+# Blender backups and local trial exports
+*.blend[0-9]*
+*.blend@
+/assets/blender/*.glb
+
+# Local dependencies, build output, and caches
+node_modules/
+/dist/
+__pycache__/
+*.py[cod]
+/.cache/
+/playwright-report/
+/test-results/
+
+# Local environment and editor settings
+.env
+.env.*
+!.env.example
+/.codex/
+/.claude/
+/.mcp.json
+/CLAUDE.local.md
+/.vercel/
+/.vscode/
+/.idea/
+Thumbs.db
+.DS_Store
