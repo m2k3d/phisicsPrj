@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 960" width="1440" height="960" role="img" aria-label="ЛАБОРАТОРНАЯ УСТАНОВКА V3  /  ВАРИАНТ B">
+<title>ЛАБОРАТОРНАЯ УСТАНОВКА V3  /  ВАРИАНТ B</title>
+<defs>
+ <marker id="arrow" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+<path d="M0 1 8 4.5 0 8" fill="none" stroke="#186c6c" stroke-width="1.4"/></marker>
+ <marker id="dim" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto-start-reverse">
+<path d="M0 1 7 4.5 0 8" fill="none" stroke="#697979" stroke-width="1.1"/></marker>
+ <pattern id="scope_grid" width="14" height="12" patternUnits="userSpaceOnUse">
+<path d="M14 0H0V12" fill="none" stroke="#86b7ac" stroke-opacity=".26" stroke-width="1"/></pattern>
+ <style>
+ text{font-family:"Segoe UI",Arial,sans-serif;fill:#192b31}
+ .tag{font-size:16px;font-weight:700;letter-spacing:2px;fill:#17696a}
+ .title{font-size:49px;font-weight:650;letter-spacing:-1px}
+ .subtitle{font-size:22px;fill:#536768}
+ .head{font-size:23px;font-weight:650}
+ .body{font-size:17px}.small{font-size:15px}.tiny{font-size:12px}
+ .muted{fill:#536768}.accent{fill:#17696a;font-weight:650}.white{fill:#f7fbf9}
+ .panel{fill:#fff;stroke:#d2dfde;stroke-width:1.3}
+ .table{fill:#efebe1;stroke:#7d8886;stroke-width:1.5}
+ .edge{fill:#cbbb9d;stroke:#7d8886;stroke-width:1.3}
+ .frame{fill:#dce5e5;stroke:#74898b;stroke-width:1.5}
+ .board{fill:#d4dddd;stroke:#62777a;stroke-width:1.6}
+ .outline{fill:none;stroke:#a5b3b4;stroke-width:1.5;stroke-dasharray:5 4}
+ .newframe{fill:#cfebea;stroke:#478c8d;stroke-width:1.5}
+ .sensor{fill:#e5f5f3;stroke:#16716e;stroke-width:1.45}
+ .pole{fill:#d68b50;stroke:#7d4e28;stroke-width:1.05}
+ .wire{fill:none;stroke:#51646b;stroke-width:1.25}
+ .active{fill:none;stroke:#a75d26;stroke-width:2}
+ .grip{fill:#fff2da;fill-opacity:.76;stroke:#c17a43;stroke-width:1.15;stroke-dasharray:4 4}
+ .signal{fill:none;stroke:#186c6c;stroke-width:1.55;stroke-linecap:round;stroke-linejoin:round}
+ .arrow{fill:none;stroke:#186c6c;stroke-width:1.6;marker-end:url(#arrow)}
+ .dash{fill:none;stroke:#25867f;stroke-width:1.3;stroke-dasharray:5 4}
+ .dim{fill:none;stroke:#697979;stroke-width:1.2;marker-start:url(#dim);marker-end:url(#dim)}
+ .guide{fill:none;stroke:#9ba9a8;stroke-width:1;stroke-dasharray:3 3}
+ .front{fill:#243740;stroke:#526a70;stroke-width:1.6}
+ .face{fill:#e8edeb;stroke:#637c7d;stroke-width:1.3}
+ .lcd{fill:#162a2e;stroke:#48676c;stroke-width:1.2}
+ .scope{fill:none;stroke:#a8ebce;stroke-width:1.65}
+ .metric{font-family:Consolas,monospace;font-size:22px;fill:#eea184}
+ .flow{fill:#eef7f5;stroke:#aad0ca;stroke-width:1.25}
+ </style>
+</defs>
+<path d="M0 0H1440V960H0Z" fill="#f3f7f6"/>
+<text x="47" y="52" class="tag" >ЛАБОРАТОРНАЯ УСТАНОВКА V3  /  ВАРИАНТ B</text>
+<text x="47" y="110" class="title" >Цифровой осциллограф</text>
+<text x="47" y="148" class="subtitle" >Одиночный захват щипка на выбранном канале из трёх</text>
+<rect x="46" y="182" width="792" height="522" class="panel" rx="12"/>
+<rect x="858" y="182" width="536" height="522" class="panel" rx="12"/>
+<text x="70" y="222" class="head" >Вид спереди</text>
+<text x="883" y="222" class="head" >Вид сверху</text>
+<text x="883" y="249" class="small muted" >Доска показана пунктиром</text>
+<rect x="104.75" y="612" width="670.5" height="22.35" class="edge" />
+<rect x="317.075" y="267.81" width="245.85" height="22.35" class="frame" />
+<rect x="305.9" y="351.25" width="268.2" height="14.9" class="newframe" />
+<rect x="272.375" y="607.53" width="67.05" height="4.47" class="frame" />
+<rect x="294.725" y="261.105" width="22.35" height="346.425" class="frame" />
+<path d="M295.47 559.85 V607.53 H279.08000000000004Z M316.33 559.85 V607.53 H332.72Z" class="frame" />
+<path d="M296.21500000000003 287.925 H315.585 L313.35 334.86 H298.45Z" class="frame" />
+<rect x="540.575" y="607.53" width="67.05" height="4.47" class="frame" />
+<rect x="562.925" y="261.105" width="22.35" height="346.425" class="frame" />
+<path d="M563.67 559.85 V607.53 H547.28Z M584.53 559.85 V607.53 H600.92Z" class="frame" />
+<path d="M564.415 287.925 H583.785 L581.55 334.86 H566.65Z" class="frame" />
+<rect x="355.4425" y="312.51" width="14.9" height="38.74" class="newframe" />
+<rect x="333.0925" y="289.7875" width="59.6" height="26.075" class="sensor" rx="3"/>
+<circle cx="362.8925" cy="302.825" r="4.5" class="pole"/>
+<text x="376.3025" y="304.315" class="tiny accent" text-anchor="middle">1</text>
+<rect x="340.915" y="381.05" width="34.27" height="37.25" class="grip" rx="6"/>
+<line x1="358.05" y1="287.925" x2="358.05" y2="511.425" class="wire" />
+<path d="M358.05 511.425v4 q-6 5 0 9 q5 2 6-4" class="wire" />
+<rect x="437.3925" y="312.51" width="14.9" height="38.74" class="newframe" />
+<rect x="415.0425" y="289.7875" width="59.6" height="26.075" class="sensor" rx="3"/>
+<circle cx="444.8425" cy="302.825" r="4.5" class="pole"/>
+<text x="458.2525" y="304.315" class="tiny accent" text-anchor="middle">2</text>
+<rect x="422.865" y="381.05" width="34.27" height="37.25" class="grip" rx="6"/>
+<line x1="440" y1="287.925" x2="440" y2="511.425" class="active" />
+<path d="M440 511.425v4 q-6 5 0 9 q5 2 6-4" class="wire" />
+<rect x="519.3425" y="312.51" width="14.9" height="38.74" class="newframe" />
+<rect x="496.9925" y="289.7875" width="59.6" height="26.075" class="sensor" rx="3"/>
+<circle cx="526.7925" cy="302.825" r="4.5" class="pole"/>
+<text x="540.2025" y="304.315" class="tiny accent" text-anchor="middle">3</text>
+<rect x="504.815" y="381.05" width="34.27" height="37.25" class="grip" rx="6"/>
+<line x1="521.95" y1="287.925" x2="521.95" y2="511.425" class="wire" />
+<path d="M521.95 511.425v4 q-6 5 0 9 q5 2 6-4" class="wire" />
+<rect x="283.55" y="276.005" width="312.9" height="11.92" class="board" rx="1"/>
+<rect x="353.729" y="272.28000000000003" width="8.641999999999996" height="3.725" class="frame" rx="2"/>
+<rect x="435.679" y="272.28000000000003" width="8.642" height="3.725" class="pole" rx="2"/>
+<rect x="517.629" y="272.28000000000003" width="8.641999999999996" height="3.725" class="frame" rx="2"/>
+<rect x="427.335" y="540.48" width="25.33" height="31.524675" class="front" rx="4"/>
+<line x1="440" y1="526.325" x2="440" y2="541.225" class="active" />
+<text x="440" y="559.105" class="tiny white" text-anchor="middle">300 г</text>
+<rect x="599.0575" y="597.1" width="145.275" height="14.9" class="frame" rx="3"/>
+<rect x="612.84" y="591.885" width="25.33" height="5.215" class="front" rx="3"/>
+<rect x="659.03" y="582.2" width="25.33" height="14.9" class="front" rx="3"/>
+<rect x="705.22" y="597.1" width="25.33" height="2.235" class="newframe" rx="3"/>
+<text x="671.6949999999999" y="606.04" class="tiny muted" text-anchor="middle">Лоток грузов</text>
+<rect x="112.19999999999999" y="491.49625000000003" width="197.68575" height="120.50375" class="front" rx="7"/>
+<rect x="118.19999999999999" y="498.49625000000003" width="182" height="105" class="face" rx="5"/>
+<rect x="124.19999999999999" y="503.49625000000003" width="130" height="77" class="lcd" rx="3"/>
+<rect x="128.2" y="517.49625" width="121" height="43" fill="url(#scope_grid)"/>
+<text x="130.2" y="513.49625" class="tiny white" >Смещение, мм</text>
+<path d="M144.075 518V561M243.242 518V561" fill="none" stroke="#d9a179" stroke-width="1" stroke-dasharray="2 2"/>
+<polyline points="129.2,523.49625 130.02638888888887,524.1267456666726 130.85277777777776,525.8655463854418 131.67916666666665,528.5876032515423 132.50555555555553,532.101838695802 133.33194444444445,536.1645407285463 134.15833333333333,540.49625 134.98472222222222,544.8009705162212 135.8111111111111,548.7863842522409 136.6375,552.1836899166037 137.46388888888887,554.7657202552275 138.29027777777776,556.3621176317655 139.11666666666665,556.870555101254 139.94305555555553,556.2632651947179 140.76944444444445,554.5884620488704 141.59583333333333,551.9665920707238 142.42222222222222,548.5817001082561 143.2486111111111,544.6685281894538 144.075,540.49625 144.90138888888887,536.3499672289274 145.72777777777776,532.5112389660854 146.55416666666665,529.2389731148797 147.38055555555553,526.7519759063316 148.20694444444445,525.214334864786 149.03333333333333,524.7246107324146 149.85972222222222,525.3095489803285 150.6861111111111,526.9227100211899 151.5125,529.4480805481306 152.33888888888887,532.7083895909676 153.16527777777776,536.4775349387398 153.99166666666665,540.49625 154.81805555555553,544.4899264193891 155.64444444444445,548.1873680533057 156.47083333333333,551.3391962544855 157.29722222222222,553.7346580826463 158.1236111111111,555.2157053503215 158.95,555.6874049008449 159.77638888888887,555.1239956457428 160.60277777777776,553.5702079363002 161.42916666666665,551.1377851420743 162.25555555555553,547.9974736719691 163.08194444444445,544.3670539134165 163.90833333333333,540.49625 164.73472222222222,536.6495631666611 165.5611111111111,533.0882080250242 166.3875,530.0523846960327 167.21388888888887,527.7450892352849 168.04027777777776,526.3185527746796 168.86666666666665,525.864214400774 169.69305555555553,526.4068870501806 170.51944444444445,527.9034866982388 171.34583333333333,530.2463827551741 172.17222222222222,533.2711132330842 172.9986111111111,536.7679132785054 173.825,540.49625 174.65138888888887,544.2013572845922 175.47777777777776,547.6316346765383 176.30416666666665,550.5557227602095 177.13055555555553,552.7780968680344 177.95694444444445,554.1521288235647 178.78333333333333,554.5897450090669 179.60972222222222,554.0670457425088 180.4361111111111,552.6255293159361 181.2625,550.3688649125959 182.08888888888887,547.4554614011629 182.91527777777776,544.0873631175272 183.74166666666665,540.49625 184.56805555555553,536.9275113464241 185.39444444444445,533.6234873112677 186.22083333333333,530.8070219921516 187.04722222222222,528.6664436574074 187.8736111111111,527.3429837480705 188.7,526.9214742810906 189.52638888888887,527.4249352967862 190.35277777777776,528.8133958719138 191.17916666666665,530.9870024278804 192.00555555555553,533.7931764266609 192.83194444444445,537.0373098917938 193.6583333333333,540.49625 194.48472222222222,543.9336391494289 195.3111111111111,547.1160566561069 196.1375,549.8288603291838 196.96388888888887,551.8906534319036 197.79027777777776,553.1654026286542 198.61666666666667,553.5713981942657 199.44305555555553,553.0864673544078 200.26944444444445,551.7491098792193 201.0958333333333,549.655504178191 201.92222222222222,546.9526130474122 202.7486111111111,543.8278818034549 203.575,540.49625 204.40138888888887,537.185375959736 205.22777777777776,534.1200891824467 206.05416666666667,531.5071318281665 206.88055555555553,529.5212242211315 207.70694444444445,528.2933929108273 208.5333333333333,527.9023402484108 209.35972222222222,528.3694229263427 210.1861111111111,529.6575581809414 211.0125,531.6741075050804 211.83888888888887,534.2775171539536 212.66527777777776,537.2872408450111 213.49166666666667,540.49625 214.31805555555553,543.6852653933591 215.14444444444445,546.6377325059576 215.9708333333333,549.1545184433429 216.79722222222222,551.0673335645483 217.6236111111111,552.2499738285362 218.45,552.6266335700105 219.27638888888887,552.1767421420125 220.10277777777776,550.9360174555137 220.92916666666667,548.9936884034443 221.75555555555553,546.4860987626091 222.58194444444445,543.5871497045003 223.4083333333333,540.49625 224.23472222222222,537.4246081750907 225.0611111111111,534.5808083337316 225.8875,532.1566541682438 226.71388888888887,530.3142413213668 227.54027777777776,529.1751288209218 228.36666666666667,528.8123322605535 229.19305555555553,529.2456651725818 230.01944444444445,530.4407242645458 230.8458333333333,532.311564764876 231.67222222222222,534.726861108863 232.4986111111111,537.5191126588904 233.325,540.49625 234.15138888888887,543.4548382589903 234.97777777777776,546.193970391303 235.80416666666667,548.5289021511954 236.63055555555553,550.3035039204445 237.45694444444445,551.4006907220291 238.2833333333333,551.7501343437442 239.10972222222222,551.3327505018639 239.9361111111111,550.1816762556376 240.7625,548.3796931292735 241.58888888888887,546.0532931736038 242.41527777777776,543.3638120677451 243.24166666666667,540.49625 244.06805555555553,537.6465543046062 244.89444444444445,535.0082375253629 245.7208333333333,532.7592442884754 246.54722222222222,531.0499577706572 247.3736111111111,529.993153568174 248.2,529.6565714224299" class="scope"/>
+<text x="130.2" y="573.49625" class="tiny white" >91,33 Гц</text>
+<circle cx="137.2" cy="590.49625" r="4.4" class="lcd"/>
+<circle cx="166.2" cy="590.49625" r="4.4" class="lcd"/>
+<circle cx="195.2" cy="590.49625" r="4.4" class="lcd"/>
+<circle cx="224.2" cy="590.49625" r="4.4" class="lcd"/>
+<circle cx="274.2" cy="522.49625" r="9.5" class="front"/>
+<circle cx="274.2" cy="552.49625" r="7.5" class="front"/>
+<text x="134.2" y="481.49625000000003" class="body accent" >DHO804</text>
+<line x1="552" y1="315" x2="609" y2="338" class="signal" />
+<text x="619" y="344" class="body accent" >3 × PH0731</text>
+<line x1="539.085" y1="399.675" x2="609" y2="401" class="guide" />
+<text x="619" y="406" class="small muted" >Зона щипка</text>
+<text x="114" y="677" class="small muted" >Выбран средний канал Ø0,4 мм, подвес 300 г.</text>
+<rect x="891.5" y="274.9" width="459" height="285.6" class="table" rx="4"/>
+<rect x="1006.25" y="322.075" width="45.9" height="63.75" class="frame" />
+<rect x="1021.55" y="346.3" width="15.3" height="15.3" class="board" />
+<rect x="1025.12" y="361.6" width="8.16" height="25.5" class="newframe" />
+<rect x="1189.85" y="322.075" width="45.9" height="63.75" class="frame" />
+<rect x="1205.15" y="346.3" width="15.3" height="15.3" class="board" />
+<rect x="1208.72" y="361.6" width="8.16" height="25.5" class="newframe" />
+<rect x="1029.2" y="387.1" width="183.6" height="10.2" class="newframe" />
+<rect x="1047.815" y="418.465" width="40.8" height="12.75" class="sensor" rx="2"/>
+<rect x="1063.115" y="397.3" width="10.2" height="21.165" class="newframe" />
+<circle cx="1068.215" cy="431.215" r="3.4" class="pole"/>
+<circle cx="1064.9" cy="433" r="2" class="front"/>
+<polyline points="1081.475,421.78 1081.475,377.92 1001.15,377.92 1001.15,346.3 955.76,346.3" class="signal"/>
+<rect x="1103.915" y="418.465" width="40.8" height="12.75" class="sensor" rx="2"/>
+<rect x="1119.215" y="397.3" width="10.2" height="21.165" class="newframe" />
+<circle cx="1124.315" cy="431.215" r="3.4" class="pole"/>
+<circle cx="1121" cy="433" r="2" class="front"/>
+<polyline points="1137.575,421.78 1137.575,377.92 1001.15,377.92 1001.15,346.3 955.76,346.3" class="signal"/>
+<rect x="1160.015" y="418.465" width="40.8" height="12.75" class="sensor" rx="2"/>
+<rect x="1175.315" y="397.3" width="10.2" height="21.165" class="newframe" />
+<circle cx="1180.415" cy="431.215" r="3.4" class="pole"/>
+<circle cx="1177.1" cy="433" r="2" class="front"/>
+<polyline points="1193.675,421.78 1193.675,377.92 1001.15,377.92 1001.15,346.3 955.76,346.3" class="signal"/>
+<rect x="1013.9" y="379.45" width="214.20000000000002" height="71.4" class="outline" />
+<rect x="896.6" y="313.65999999999997" width="61.2" height="47.94" class="sensor" rx="4"/>
+<text x="927.2" y="337.12" class="tiny accent" text-anchor="middle">Усилитель</text>
+<rect x="896.6" y="470.0362" width="135.32850000000002" height="39.4638" class="front" rx="4"/>
+<polyline points="915.98,361.6 900.6800000000001,370.27 900.6800000000001,518.6800000000001 947.6,518.6800000000001 947.6,509.5" class="signal"/>
+<polyline points="918.53,361.6 903.23,370.27 903.23,521.23 950.15,521.23 950.15,509.5" class="signal"/>
+<polyline points="921.0799999999999,361.6 905.78,370.27 905.78,523.78 952.7,523.78 952.7,509.5" class="signal"/>
+<text x="964.26425" y="494.7681" class="small white" text-anchor="middle">Осциллограф</text>
+<rect x="1229.885" y="418.72" width="99.45" height="59.160000000000004" class="frame" rx="4"/>
+<circle cx="1247.99" cy="448.3" r="10" class="outline"/>
+<circle cx="1279.6100000000001" cy="448.3" r="10" class="outline"/>
+<circle cx="1311.23" cy="448.3" r="10" class="outline"/>
+<circle cx="961.88" cy="304.48" r="5" class="outline"/>
+<line x1="891.5" y1="583" x2="1350.5" y2="583" class="dim" />
+<text x="1121" y="605" class="small muted" text-anchor="middle">900 мм</text>
+<line x1="1364" y1="274.9" x2="1364" y2="560.5" class="dim" />
+<text x="1378" y="427" class="tiny muted" transform="rotate(-90 1378 427)" text-anchor="middle">560 мм</text>
+<text x="910" y="645" class="small muted" >Передняя кромка · оператор</text>
+<line x1="1327" y1="644" x2="1327" y2="618" class="arrow" />
+<line x1="912" y1="672" x2="944" y2="672" class="signal" />
+<text x="954" y="677" class="small muted" >Экранированный сигнальный кабель</text>
+<rect x="46" y="726" width="1348" height="205" class="panel" rx="12"/>
+<text x="71" y="766" class="head" >Тракт регистрации</text>
+<rect x="72" y="796" width="246" height="66" class="flow" rx="9"/>
+<text x="89" y="824" class="body accent" >PH0731 × 3</text>
+<text x="89" y="847" class="small muted" >По одному на струну</text>
+<rect x="360" y="796" width="265" height="66" class="flow" rx="9"/>
+<text x="377" y="824" class="body accent" >Предусилитель × 3</text>
+<text x="377" y="847" class="small muted" >Корпус Hammond 1590BB</text>
+<rect x="667" y="796" width="255" height="66" class="flow" rx="9"/>
+<text x="684" y="824" class="body accent" >CH1 / CH2 / CH3</text>
+<text x="684" y="847" class="small muted" >Три кабеля BNC</text>
+<rect x="964" y="796" width="402" height="66" class="flow" rx="9"/>
+<text x="981" y="824" class="body accent" >Цифровой осциллограф</text>
+<text x="981" y="847" class="small muted" >DHO804 · захват Single · частота</text>
+<line x1="320" y1="829" x2="355" y2="829" class="arrow" />
+<line x1="627" y1="829" x2="662" y2="829" class="arrow" />
+<line x1="923" y1="829" x2="958" y2="829" class="arrow" />
+<text x="72" y="904" class="small muted" >Секундомер остаётся в интерфейсе. Экран эскиза показывает программный график смещения.</text>
+</svg>
