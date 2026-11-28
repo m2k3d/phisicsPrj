@@ -1,5 +1,6 @@
 from math import cos, pi, sin
 from pathlib import Path
+import subprocess
 import sys
 
 import bpy
@@ -43,20 +44,34 @@ def cylinder(name, location, radius, depth, surface, bevel=0):
     return obj
 
 
-def hook(name, x, y, bottom, surface):
+def line(name, coordinates, radius, surface):
     curve = bpy.data.curves.new(name, "CURVE")
     curve.dimensions = "3D"
-    curve.bevel_depth = 0.0012
+    curve.bevel_depth = radius
     points = curve.splines.new("POLY")
-    angles = [pi - step * 1.55 * pi / 24 for step in range(25)]
-    coordinates = [(x, y, bottom), (x, y, bottom - 0.004)]
-    coordinates.extend((x + 0.0038 + 0.0038 * cos(a), y, bottom - 0.004 + 0.0038 * sin(a)) for a in angles)
     points.points.add(len(coordinates) - 1)
     for point, position in zip(points.points, coordinates):
         point.co = (*position, 1)
     obj = bpy.data.objects.new(name, curve)
     curve.materials.append(surface)
     bpy.context.collection.objects.link(obj)
+
+
+def hook(name, x, y, bottom, surface):
+    angles = [pi - step * 1.55 * pi / 24 for step in range(25)]
+    coordinates = [(x, y, bottom), (x, y, bottom - 0.004)]
+    coordinates.extend((x + 0.0038 + 0.0038 * cos(a), y, bottom - 0.004 + 0.0038 * sin(a)) for a in angles)
+    line(name, coordinates, 0.0012, surface)
+
+
+def text(label, location, size, font, surface):
+    bpy.ops.object.text_add(location=location, rotation=(pi / 2, 0, 0))
+    obj = finish(label, surface)
+    obj.data.body = label
+    obj.data.font = font
+    obj.data.align_x = "CENTER"
+    obj.data.align_y = "CENTER"
+    obj.data.size = size
 
 
 def weight(mass, x, y, bottom, surface, steel):
@@ -86,47 +101,65 @@ def area_light(name, location, power, size, color):
 
 def build():
     bpy.ops.wm.read_factory_settings(use_empty=True)
-    aluminum = material("Satin aluminum", (0.38, 0.43, 0.49), 0.72)
+    font_path = subprocess.check_output(["fc-match", "-f", "%{file}", "sans-serif:lang=ru"], text=True)
+    font = bpy.data.fonts.load(font_path)
+    font.pack()
+    aluminum = material("Satin aluminum", (0.40, 0.47, 0.53), 0.6)
     graphite = material("Graphite", (0.028, 0.042, 0.061), 0.25)
+    display = material("Display glass", (0.009, 0.032, 0.044), 0.25, 0.26)
+    lettering = material("Pale lettering", (0.72, 0.87, 0.91), roughness=0.55)
     steel = material("Polished steel", (0.64, 0.71, 0.78), 0.72, 0.25)
     brass = material("Brass weights", (0.55, 0.27, 0.075), 0.63, 0.27)
     active = material("Mounted string marker", (0.96, 0.54, 0.16), 0.40, 0.3)
+    trace = material("Amplitude envelope", (0.64, 0.26, 0.062), roughness=0.55)
 
-    for x in (-0.224, 0.224):
-        box("Foot", (x, 0, 0.012), (0.072, 0.25, 0.024), graphite, 0.004)
-        box("Upright", (x, 0.036, 0.231), (0.028, 0.029, 0.414), aluminum, 0.002)
-        box("Upright channel", (x, 0.021, 0.231), (0.007, 0.002, 0.397), graphite)
-        box("Upright shoe", (x, 0.036, 0.037), (0.047, 0.046, 0.032), aluminum, 0.002)
-
-    wire_xs = (-0.107, 0, 0.107)
-    wire_y, top_z, span = 0.009, 0.417, 0.30
+    wire_xs = (-0.144, -0.024, 0.096)
+    wire_y, top_z, span = 0.013, 0.389, 0.30
     lower_z = top_z - span
-    beam_z = 0.427
-    box("Rear half of top rail", (0, 0.046, beam_z), (0.486, 0.034, 0.028), aluminum, 0.002)
-    edges = [-0.243]
+    panel_thickness = 0.016
+    panel_z = top_z + panel_thickness / 2
+    box("Rear strip of board", (-0.024, 0.060, panel_z), (0.40, 0.070, panel_thickness), aluminum)
+    slot_width = 0.007
+    edges = [-0.224]
     for x in wire_xs:
-        edges.extend((x - 0.012, x + 0.012))
-    edges.append(0.243)
+        edges.extend((x - slot_width / 2, x + slot_width / 2))
+    edges.append(0.176)
     for left, right in zip(edges[::2], edges[1::2]):
-        box("Front section between slots", ((left + right) / 2, 0.009, beam_z),
-            (right - left, 0.040, 0.028), aluminum, 0.002)
+        box("Front section between slots", ((left + right) / 2, -0.005, panel_z),
+            (right - left, 0.060, panel_thickness), aluminum)
 
     for index, (x, radius) in enumerate(zip(wire_xs, (0.00085, 0.00110, 0.00135)), start=1):
-        marker = active if index == 2 else graphite
-        box(f"Clamp {index}", (x, 0.017, 0.433), (0.020, 0.028, 0.034), marker)
-        cylinder(f"Clamp screw {index}", (x, 0.017, 0.453), 0.006, 0.008, steel, 0.0007)
-        cylinder(f"String {index}", (x, wire_y, (top_z + lower_z) / 2), radius, span,
-                 active if index == 2 else steel)
+        wire = active if index == 1 else steel
+        cylinder(f"Ball-end stop {index}", (x, wire_y, top_z + panel_thickness + 0.0045),
+                 0.010, 0.009, brass if index == 1 else steel, 0.0025)
+        cylinder(f"String through slot {index}", (x, wire_y, panel_z), radius, panel_thickness, wire)
+        cylinder(f"String {index}", (x, wire_y, (top_z + lower_z) / 2), radius, span, wire)
         hook(f"Hook {index}", x, wire_y, lower_z, steel)
 
-    weight(200, 0.004, wire_y, lower_z - 0.041, brass, steel)
-    box("Tray bottom", (0, -0.074, 0.004), (0.285, 0.084, 0.012), graphite, 0.003)
-    for y in (-0.115, -0.033):
-        box("Tray rim", (0, y, 0.014), (0.285, 0.004, 0.014), graphite)
-    for x in (-0.14, 0.14):
-        box("Tray end", (x, -0.074, 0.014), (0.005, 0.078, 0.014), graphite)
-    weight(100, -0.074, -0.074, 0.010, brass, steel)
-    weight(300, 0.074, -0.074, 0.010, brass, steel)
+    for direction in (-1, 1):
+        samples = [step / 64 for step in range(65)]
+        outline = [(wire_xs[0] + direction * 0.014 * sin(pi * p), wire_y, top_z - span * p) for p in samples]
+        line("Real-time envelope", outline, 0.00065, trace)
+
+    weight(200, wire_xs[0] + 0.004, wire_y, lower_z - 0.041, brass, steel)
+    tray_x = 0.275
+    box("Tray bottom", (tray_x, -0.067, 0.005), (0.241, 0.090, 0.014), graphite, 0.003)
+    for y in (-0.112, -0.022):
+        box("Tray rim", (tray_x, y, 0.016), (0.241, 0.004, 0.016), graphite)
+    for x in (tray_x - 0.118, tray_x + 0.118):
+        box("Tray end", (x, -0.067, 0.016), (0.005, 0.088, 0.016), graphite)
+    for mass, x in zip((100, 200, 300), (tray_x - 0.076, tray_x, tray_x + 0.076)):
+        cylinder(f"Tray position {mass} g", (x, -0.067, 0.0125), 0.027, 0.001, aluminum, 0.0002)
+        text(f"{mass} г", (x, -0.1142, 0.016), 0.011, font, lettering)
+        if mass != 200:
+            weight(mass, x, -0.067, 0.013, brass, steel)
+
+    instrument_x = -0.301
+    box("Instrument housing", (instrument_x, -0.075, 0.059), (0.174, 0.087, 0.122), graphite, 0.005)
+    for title, reading, height in (("СЕКУНДОМЕР", "0,050 с", 0.086), ("ЧАСТОТОМЕР", "99,42 Гц", 0.032)):
+        box(f"{title} display", (instrument_x, -0.119, height), (0.153, 0.003, 0.041), display)
+        text(title, (instrument_x, -0.121, height + 0.011), 0.011, font, lettering)
+        text(reading, (instrument_x, -0.121, height - 0.007), 0.017, font, lettering)
 
     floor = material("Preview floor", (0.054, 0.075, 0.11), roughness=0.84)
     box("Preview floor", (0, 0, -0.017), (200, 200, 0.03), floor, 0)
@@ -136,17 +169,17 @@ def build():
 
     scene = bpy.context.scene
     scene.unit_settings.system = "METRIC"
-    bpy.ops.object.camera_add(location=(0.46, -0.96, 0.58))
+    bpy.ops.object.camera_add(location=(0.10, -1.15, 0.63))
     scene.camera = bpy.context.object
     scene.camera.name = "Preview camera"
-    aim(scene.camera, (0, 0, 0.213))
+    aim(scene.camera, (0, -0.01, 0.204))
     scene.camera.data.type = "ORTHO"
-    scene.camera.data.ortho_scale = 0.74
+    scene.camera.data.ortho_scale = 0.93
     scene.render.engine = "CYCLES"
     scene.cycles.samples = 48
     scene.cycles.use_denoising = True
-    scene.render.resolution_x = 960
-    scene.render.resolution_y = 800
+    scene.render.resolution_x = 1280
+    scene.render.resolution_y = 780
     scene.render.resolution_percentage = 100
     bpy.ops.object.select_all(action="DESELECT")
     for screen in bpy.data.screens:
